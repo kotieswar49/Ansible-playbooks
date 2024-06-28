@@ -1,0 +1,7 @@
+---
+- name: adding text from master to slave
+  hosts: all
+  become: true
+  tasks: 
+  - name: adding text to all slaves
+    script: task1.sh

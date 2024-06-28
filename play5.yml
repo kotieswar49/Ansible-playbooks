@@ -1,0 +1,7 @@
+---
+- name: copying index file to slave
+  hosts: all
+  become: true
+  tasks:
+  - name: copying index file
+    copy: src=/home/ubuntu/files/ dest=/var/www/html

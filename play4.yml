@@ -1,0 +1,9 @@
+---
+- name: installing apache2
+  hosts: all
+  become: true
+  tasks: 
+  - name: installing apache2 on all slaves
+    apt: name=apache2 update-cache=yes state=latest
+  - name: installing nginx on all slaves
+    apt: name=nginx update-cache=yes state=latest

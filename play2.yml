@@ -1,0 +1,7 @@
+---
+- name: installing docker
+  hosts: all
+  become: true
+  tasks:
+  - name: installing docker on all hosts
+    apt: name=docker.io update-cache=yes state=latest
